@@ -25,6 +25,13 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            Player player4 = new SmackTalkingPlayer();
+            player4.Name = "Bill";
+
+            player4.Play(player3);
+
+            Console.WriteLine("-------------------");
+
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
 
@@ -33,7 +40,7 @@ namespace ShootingDice
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, player4, large
             };
 
             PlayMany(players);
